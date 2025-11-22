@@ -1,6 +1,16 @@
 # 🌐 Study Jam Web Development - GDGoC UB
 Centralized Web Development Study Jam resources
 
+## 📑 Daftar Isi
+
+- [🔥 Preparation](#-preparation)
+- [💪 1. Hands-on](#-1-hands-on)
+- [🧩 2. Membuat Struktur Halaman (HTML--Navbar)](#-2-membuat-struktur-halaman-html--navbar)
+- [🎨 3. Styling Website (CSS)](#-3-styling-website-css)
+- [⚡ 4. Menambahkan Interaksi JavaScript](#-4-menambahkan-interaksi-javascript)
+- [📚 Resources Belajar Lanjutan](#-resources-belajar-lanjutan)
+
+---
 ## 🔥 Preparation
 Jangan lupa siapkan hal-hal ini terlebih dahulu sebelum kalian mulai
 - Install [VSCode](https://code.visualstudio.com/download)
@@ -292,12 +302,15 @@ Buka `index.html`, lalu tambahkan tombol ini di dalam `<body>`:
 Isi file `script.js` dengan:
 
 ```javascript
+// ---- BAGIAN UNTUK INDEX.HTML ----
 const btn = document.getElementById("helloBtn");
 const msg = document.getElementById("message");
 
-btn.addEventListener("click", () => {
-    msg.textContent = "Halo! Kamu baru saja menekan tombol 🎉";
-});
+if (btn && msg) {
+    btn.addEventListener("click", () => {
+        msg.textContent = "Halo! Kamu baru saja menekan tombol 🎉";
+    });
+}
 ```
 
 ### 4.5 Cek Hasilnya
@@ -318,14 +331,15 @@ Buka `form.html`, lalu tambahkan:
 Tambahkan ke `script.js`:
 
 ```javascript
+// ---- BAGIAN UNTUK FORM.HTML ----
+const form = document.getElementById("myForm");
 const nameInput = document.getElementById("nameInput");
-const submitBtn = document.getElementById("submitBtn");
 const output = document.getElementById("output");
 
-if (submitBtn) {
-    submitBtn.addEventListener("click", () => {
-        const name = nameInput.value;
-        output.textContent = "Halo, " + name + "!";
+if (form && nameInput && output) {
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        output.textContent = "Halo, " + nameInput.value + "!";
     });
 }
 ```
