@@ -338,3 +338,28 @@ Sekarang kalian punya:
 
 Mini website lengkap 🎉  
 
+
+
+## 📚 Resources Belajar Lanjutan
+
+Kalau kalian ingin memperdalam HTML, CSS, dan JavaScript, berikut beberapa sumber belajar terpercaya:
+
+### 🔹 HTML & CSS
+- **MDN Web Docs - HTML**  
+  https://developer.mozilla.org/en-US/docs/Web/HTML
+- **MDN Web Docs - CSS**  
+  https://developer.mozilla.org/en-US/docs/Web/CSS
+- **W3Schools HTML Tutorial**  
+  https://www.w3schools.com/html/
+- **W3Schools CSS Tutorial**  
+  https://www.w3schools.com/css/
+- **FreeCodeCamp - Responsive Web Design**  
+  https://www.freecodecamp.org/learn/2022/responsive-web-design/
+
+### 🔹 JavaScript
+- **MDN Web Docs - JavaScript Guide**  
+  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+- **JavaScript.info**  
+  https://javascript.info/
+- **W3Schools JavaScript Basics**  
+  https://www.w3schools.com/js/
