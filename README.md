@@ -135,6 +135,9 @@ Ganti isi index.html yang kita coba di awal tadi menjadi seperti ini
 </body>
 </html>
 ```
+Begini seharusnya tampilan di browser:
+
+<img width="580" height="227" alt="image" src="https://github.com/user-attachments/assets/d6bb7857-62ee-4e1b-af13-e94a5d6c1364" />
 
 ---
 
@@ -162,6 +165,9 @@ Ganti isi index.html yang kita coba di awal tadi menjadi seperti ini
 </body>
 </html>
 ```
+Tampilan di browser:
+
+<img width="679" height="284" alt="image" src="https://github.com/user-attachments/assets/7928a22a-bc95-41f2-8d2f-75205624ffe1" />
 
 ---
 
@@ -174,6 +180,7 @@ Ganti isi index.html yang kita coba di awal tadi menjadi seperti ini
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Study Jam Web GDGoC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -186,21 +193,19 @@ Ganti isi index.html yang kita coba di awal tadi menjadi seperti ini
     <h1>Contact Form</h1>
     <p>Silakan isi form di bawah:</p>
 
-    <form>
+    <form id="myForm">
         <label>Nama:</label>
-        <input type="text" />
-        <br /><br />
+        <input id="nameInput" type="text" />
+        <br><br>
 
-        <label>Email:</label>
-        <input type="email" />
-        <br /><br />
-
-        <button type="submit">Kirim</button>
+        <button id="submitBtn" type="submit">Kirim</button>
     </form>
 
+    
 </body>
 </html>
 ```
+<img width="787" height="297" alt="image" src="https://github.com/user-attachments/assets/30f9ce18-5a82-46f5-a913-b82b0b6139ad" />
 
 ---
 
@@ -272,8 +277,9 @@ input {
 }
 ```
 
+Sekarang, tampilan halaman menjadi lebih menarik:
 
-
+<img width="727" height="344" alt="image" src="https://github.com/user-attachments/assets/52d8a1a0-8ca6-4700-91d5-dc00f8ab238c" />
 
 
 ## ⚡ 4. Menambahkan Interaksi (JavaScript)
@@ -317,6 +323,7 @@ if (btn && msg) {
 - Simpan semua file  
 - Buka `index.html` via Live Server  
 - Klik tombolnya → harus muncul teks baru  
+<img width="627" height="271" alt="image" src="https://github.com/user-attachments/assets/44559bc3-210c-4ff3-ae38-2aa226966151" />
 
 ### 4.6 (Optional) Contoh Interaksi di Form Page
 Buka `form.html`, lalu tambahkan:
@@ -377,3 +384,4 @@ Kalau kalian ingin memperdalam HTML, CSS, dan JavaScript, berikut beberapa sumbe
   https://javascript.info/
 - **W3Schools JavaScript Basics**  
   https://www.w3schools.com/js/
+
