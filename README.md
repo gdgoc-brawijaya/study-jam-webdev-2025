@@ -44,3 +44,50 @@ Browser akan menampilkan tulisan “Hello World!”
 <img width="645" height="206" alt="image" src="https://github.com/user-attachments/assets/ce7f7530-7a1b-43d2-bc72-62bb3c24d184" />
 
 ## 🧱 2. Menambah Struktur Website (HTML)
+Sekarang kita tambahkan beberapa elemen dasar agar halaman punya konten:
+
+### 2.1 Tambahkan teks & tombol
+Masukkan ke dalam `<body>`:
+```html
+<h2>Welcome to Study Jam!</h2>
+
+<p>Ini adalah website pertama kalian 😎</p>
+
+<input type="text" id="nameInput" placeholder="Tulis nama kamu..." />
+
+<button id="helloBtn">Say Hello</button>
+
+<p id="output"></p>
+
+```
+
+## 🎨 3. Styling Website (CSS)
+### 3.1 Buat file baru `style.css`
+Masukkan di folder yang sama.
+
+### 3.2 Hubungkan CSS ke HTML
+Tambahkan ini di `<head>` pada `index.html`:
+```html
+<link rel="stylesheet" href="style.css">
+```
+
+
+### 3.3 Tambahkan style dasar
+Isi `style.css` dengan kode berikut:
+```css
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+button {
+    padding: 8px 14px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+```
+
+
+## ⚡ 4. Menambahkan Interaksi (JavaScript)
