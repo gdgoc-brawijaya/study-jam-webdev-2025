@@ -7,7 +7,7 @@ Jangan lupa siapkan hal-hal ini terlebih dahulu sebelum kalian mulai
 - Install Live Server (VSCode extension)
 - Siapkan folder kosong untuk project hands-on
 
-## 💪 Hands-on
+## 💪 1. Hands-on
 ### 1.1 Buka VS Code kalian
 Setelah menginstall VS Code, buka aplikasinya lalu pilih Open Folder untuk memulai project baru.
 <img width="1158" height="674" alt="Open Folder" src="https://github.com/user-attachments/assets/47e29da5-e42c-4745-9adb-f50333123019" />
@@ -38,5 +38,9 @@ Masukkan struktur HTML minimal agar browser bisa membaca halaman kalian. Isi fil
 
 ### 1.5 Jalankan Website Menggunakan Live Server
 Klik kanan pada index.html → Open with Live Server untuk melihat hasilnya di browser.
+<img width="837" height="336" alt="Screenshot 2025-11-22 150219" src="https://github.com/user-attachments/assets/2d6bcfb5-e3df-40b4-b63f-dc4a0cd8d3f7" />
 
 Browser akan menampilkan tulisan “Hello World!”
+<img width="645" height="206" alt="image" src="https://github.com/user-attachments/assets/ce7f7530-7a1b-43d2-bc72-62bb3c24d184" />
+
+## 🧱 2. Menambah Struktur Website (HTML)
