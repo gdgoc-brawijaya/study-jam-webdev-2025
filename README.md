@@ -10,15 +10,16 @@ Jangan lupa siapkan hal-hal ini terlebih dahulu sebelum kalian mulai
 ## 💪 Hands-on
 ### 1.1 Buka VS Code kalian
 Setelah menginstall VS Code, buka aplikasinya lalu pilih Open Folder untuk memulai project baru.
-[ss gambar] 
+<img width="1158" height="674" alt="Open Folder" src="https://github.com/user-attachments/assets/47e29da5-e42c-4745-9adb-f50333123019" />
 
 ### 1.2 Buat Folder Project
 Buat folder baru bernama `studyjam-web` atau nama apa pun yang kalian suka.
 Setelah itu, buka folder tersebut di VS Code.
 
-
 ### 1.3 Buat File HTML Pertama (index.html)
 Di dalam folder tersebut, buat file baru bernama index.html. File ini akan menjadi halaman utama website kalian.
+<img width="589" height="233" alt="index.html" src="https://github.com/user-attachments/assets/a88da3aa-37e9-4df1-b0a7-e093276d2a84" />
+
 
 ### 1.4 Tambahkan Struktur HTML Dasar
 Masukkan struktur HTML minimal agar browser bisa membaca halaman kalian. Isi file tersebut dengan kode ini
@@ -37,4 +38,5 @@ Masukkan struktur HTML minimal agar browser bisa membaca halaman kalian. Isi fil
 
 ### 1.5 Jalankan Website Menggunakan Live Server
 Klik kanan pada index.html → Open with Live Server untuk melihat hasilnya di browser.
+
 Browser akan menampilkan tulisan “Hello World!”
