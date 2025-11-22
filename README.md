@@ -267,3 +267,74 @@ input {
 
 
 ## ⚡ 4. Menambahkan Interaksi (JavaScript)
+
+Sekarang kita tambahkan JavaScript agar website kalian bisa *berinteraksi* dengan user.
+
+### 4.1 Buat file `script.js`
+Di dalam folder project yang sama, buat file baru bernama `script.js`.
+
+### 4.2 Hubungkan JavaScript ke HTML  
+Tambahkan kode ini sebelum `</body>` pada **semua file HTML**:
+
+```html
+<script src="script.js"></script>
+```
+
+### 4.3 Tambahkan Tombol di Home Page
+Buka `index.html`, lalu tambahkan tombol ini di dalam `<body>`:
+
+```html
+<button id="helloBtn">Klik Aku!</button>
+<p id="message"></p>
+```
+
+### 4.4 Tambahkan Interaksi Dasar di JavaScript
+Isi file `script.js` dengan:
+
+```javascript
+const btn = document.getElementById("helloBtn");
+const msg = document.getElementById("message");
+
+btn.addEventListener("click", () => {
+    msg.textContent = "Halo! Kamu baru saja menekan tombol 🎉";
+});
+```
+
+### 4.5 Cek Hasilnya
+- Simpan semua file  
+- Buka `index.html` via Live Server  
+- Klik tombolnya → harus muncul teks baru  
+
+### 4.6 (Optional) Contoh Interaksi di Form Page
+Buka `form.html`, lalu tambahkan:
+
+```html
+<input id="nameInput" placeholder="Masukkan nama">
+<button id="submitBtn">Submit</button>
+
+<p id="output"></p>
+```
+
+Tambahkan ke `script.js`:
+
+```javascript
+const nameInput = document.getElementById("nameInput");
+const submitBtn = document.getElementById("submitBtn");
+const output = document.getElementById("output");
+
+if (submitBtn) {
+    submitBtn.addEventListener("click", () => {
+        const name = nameInput.value;
+        output.textContent = "Halo, " + name + "!";
+    });
+}
+```
+
+### 4.7 Udah jadi mini-website!
+Sekarang kalian punya:
+- 3 halaman HTML  
+- Styling CSS  
+- Interaksi JavaScript (button & form)  
+
+Mini website lengkap 🎉  
+
