@@ -204,23 +204,66 @@ Tambahkan ini di `<head>` pada `index.html`, `about.html`, dan `form.html`:
 <link rel="stylesheet" href="style.css">
 ```
 
-
 ### 3.3 Tambahkan style dasar
-Isi `style.css` dengan kode berikut:
+Isi file `style.css` dengan kode berikut:
+
 ```css
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
     padding: 20px;
-    background: #f5f5f5;
+    background: #fafafa;
 }
 
+/* Navbar */
+nav {
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #0078ff;
+}
+
+/* Headings */
+h1 {
+    color: #222;
+}
+
+/* Buttons */
 button {
     padding: 8px 14px;
-    margin-top: 10px;
     cursor: pointer;
+    background: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
 }
 
+button:hover {
+    background: #005fcc;
+}
+
+/* Form */
+input {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
 ```
+
+
+
 
 
 ## ⚡ 4. Menambahkan Interaksi (JavaScript)
