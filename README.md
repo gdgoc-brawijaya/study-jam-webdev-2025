@@ -16,5 +16,7 @@ Don't forget to install VS Code before you start your journey!
 
 **Join our Google Classroom** [Here](https://classroom.google.com/c/ODIzODMwMDQ4NDcz?cjc=jf4swrh3)
 
+### 🔥 Your enthusiasm
+[![Stars History](https://api.star-history.com/svg?repos=gdgoc-brawijaya/study-jam-webdev-2025&type=Date)](https://instagram.com/gdgoc.brawijaya/)
 
 -- Technical Team GDGoC UB 2025 --
