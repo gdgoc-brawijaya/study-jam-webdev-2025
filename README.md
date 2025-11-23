@@ -2,9 +2,9 @@
 Centralized modules for Web Development path
 
 ## Our Learning
-| Chapter | Title                           | Status    |
-| :------ | :-----------------------------  | :-------- |
-| 1       | Introduction to Web Development | ✅ Done   |
+| Chapter | Title                                                                                                                    | Status    |
+| :------ | :----------------------------------------------------------------------------------------------------------------------  | :-------- |
+| 1       | [Introduction to Web Development](https://github.com/gdgoc-brawijaya/study-jam-webdev-2025/tree/main/01-intro-to-webdev) | ✅ Done   |
 | 2       | -------- Locked --------        | 🔒 Locked |
 | 3       | -------- Locked --------        | 🔒 Locked |
 
@@ -14,4 +14,5 @@ Don't forget to install VS Code before you start your journey!
 [VS Code](https://code.visualstudio.com/download)
 
 
+**Join our Google Classroom** [Here](https://classroom.google.com/c/ODIzODMwMDQ4NDcz?cjc=jf4swrh3)
 -- Technical Team GDGoC UB 2025 --
