@@ -1,5 +1,5 @@
-# 🌐 Study Jam Web Development - GDGoC UB
-Centralized Web Development Study Jam resources
+# 🌐 Introduction to Web Development - GDGoC UB
+Kali ini, kita akan hands-on basic fundamental dari web development nihh. Jadi buat teman-teman yang merasa butuh belajar tentang web mulai dari 0, bisa banget learning by doing lewat modul ini!!. Good luck guys! ❤️‍🔥❤️‍🔥
 
 ## 📑 Daftar Isi
 
@@ -34,11 +34,11 @@ Di dalam folder tersebut, buat file baru bernama index.html. File ini akan menja
 Buat beberapa file lagi dengan struktur berikut:
 ```
 studyjam-web/
-│ index.html
-│ about.html
-│ form.html
-│ style.css
-│ script.js
+│-- index.html
+│-- about.html
+│-- form.html
+│-- style.css
+│-- script.js
 
 ```
 ### 1.4 Tambahkan Struktur HTML Dasar

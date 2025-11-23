@@ -4,7 +4,7 @@ Centralized modules for Web Development path
 ## Our Learning
 | Chapter | Title                                                                                                                    | Challenge | Status    |
 | :------ | :----------------------------------------------------------------------------------------------------------------------  | :-------- | :-------- |
-| 1       | [Introduction to Web Development](https://github.com/gdgoc-brawijaya/study-jam-webdev-2025/tree/main/01-intro-to-webdev) | [Create you portfolio!](https://github.com/gdgoc-brawijaya/study-jam-webdev-2025/blob/main/01-intro-to-webdev/CHALLENGE.md) | ✅ Done   |
+| 1       | [Introduction to Web Development](https://github.com/gdgoc-brawijaya/study-jam-webdev-2025/tree/main/01-intro-to-webdev) | [Create your portfolio!](https://github.com/gdgoc-brawijaya/study-jam-webdev-2025/blob/main/01-intro-to-webdev/CHALLENGE.md) | ✅ Done   |
 | 2       | -------- Locked --------        | 🔒 Locked |
 | 3       | -------- Locked --------        | 🔒 Locked |
 
