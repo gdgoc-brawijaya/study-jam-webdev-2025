@@ -1,24 +1,13 @@
 package main
 
 import (
-	"encoding/json"
-	"fmt"
-	"net/http"
+	"github.com/labstack/echo/v4"
+	"restful-api/handlers"
 )
 
-func helloHandler(w http.ResponseWriter, r *http.Request) {
-	response := map[string]string{
-		"message": "Hello World!",
-	}
-
-	json.NewEncoder(w).Encode(response)
-}
-
 func main() {
+	e := echo.New()
+	handlers.RegisterRoutes(e)
 
-	http.HandleFunc("/", helloHandler)
-
-	fmt.Println("Server running on http://localhost:8080")
-
-	http.ListenAndServe(":8080", nil)
+	e.Logger.Fatal(e.Start(":8080"))
 }
