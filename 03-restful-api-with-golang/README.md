@@ -116,7 +116,136 @@ Lanjutkan materi CRUD sampai endpoint berikut jadi:
 - `PUT /books/{id}`
 - `DELETE /books/{id}`
 
-Catatan pengajaran: di fase ini biarkan semua logika masih di satu file supaya peserta paham dulu, baru dirapikan di fase 2.
+### Kode Lengkap Single File (`main.go`)
+
+```go
+package main
+
+import (
+	"encoding/json"
+	"fmt"
+	"net/http"
+	"strconv"
+)
+
+type Book struct {
+	ID     int    `json:"id"`
+	Title  string `json:"title"`
+	Author string `json:"author"`
+}
+
+var (
+	books  []Book
+	nextID = 1
+)
+
+func getBooks(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(books)
+}
+
+func getBook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	id, err := strconv.Atoi(r.PathValue("id"))
+	if err != nil {
+		http.Error(w, "Invalid ID", http.StatusBadRequest)
+		return
+	}
+
+	for _, book := range books {
+		if book.ID == id {
+			json.NewEncoder(w).Encode(book)
+			return
+		}
+	}
+
+	http.Error(w, "Book not found", http.StatusNotFound)
+}
+
+func createBook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	var book Book
+	if err := json.NewDecoder(r.Body).Decode(&book); err != nil {
+		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		return
+	}
+
+	book.ID = nextID
+	nextID++
+	books = append(books, book)
+
+	w.WriteHeader(http.StatusCreated)
+	json.NewEncoder(w).Encode(book)
+}
+
+func updateBook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	id, err := strconv.Atoi(r.PathValue("id"))
+	if err != nil {
+		http.Error(w, "Invalid ID", http.StatusBadRequest)
+		return
+	}
+
+	var updated Book
+	if err := json.NewDecoder(r.Body).Decode(&updated); err != nil {
+		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		return
+	}
+
+	for i, book := range books {
+		if book.ID == id {
+			updated.ID = id
+			books[i] = updated
+			json.NewEncoder(w).Encode(updated)
+			return
+		}
+	}
+
+	http.Error(w, "Book not found", http.StatusNotFound)
+}
+
+func deleteBook(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "application/json")
+
+	id, err := strconv.Atoi(r.PathValue("id"))
+	if err != nil {
+		http.Error(w, "Invalid ID", http.StatusBadRequest)
+		return
+	}
+
+	for i, book := range books {
+		if book.ID == id {
+			books = append(books[:i], books[i+1:]...)
+			json.NewEncoder(w).Encode(book)
+			return
+		}
+	}
+
+	http.Error(w, "Book not found", http.StatusNotFound)
+}
+
+func helloHandler(w http.ResponseWriter, r *http.Request) {
+	response := map[string]string{"message": "Hello World!"}
+
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(response)
+}
+
+func main() {
+	http.HandleFunc("GET /", helloHandler)
+	http.HandleFunc("GET /books", getBooks)
+	http.HandleFunc("GET /books/{id}", getBook)
+	http.HandleFunc("POST /books", createBook)
+	http.HandleFunc("PUT /books/{id}", updateBook)
+	http.HandleFunc("DELETE /books/{id}", deleteBook)
+
+	fmt.Println("Server running on http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
+}
+```
 
 ---
 
@@ -206,7 +335,45 @@ Uji endpoint berikut:
 | `PUT` | `http://localhost:8080/books/1` | `{"title":"Learning Go","author":"Jon Bodner"}` | Ubah buku |
 | `DELETE` | `http://localhost:8080/books/1` | - | Hapus buku |
 
-Tip: lakukan `POST` beberapa kali dulu sebelum test `GET by ID`, `PUT`, dan `DELETE`.
+---
+
+## Testing Cepat dengan curl
+
+Jika server sudah jalan di `http://localhost:8080`, endpoint dapat diuji dengan urutan berikut.
+
+Untuk PowerShell, gunakan `curl.exe`:
+
+```bash
+# 0) Hello endpoint
+curl.exe -X GET http://localhost:8080/
+
+# 1) Create book #1
+curl.exe -X POST http://localhost:8080/books ^
+  -H "Content-Type: application/json" ^
+  -d "{\"title\":\"The Go Programming Language\",\"author\":\"Alan Donovan\"}"
+
+# 2) Create book #2
+curl.exe -X POST http://localhost:8080/books ^
+  -H "Content-Type: application/json" ^
+  -d "{\"title\":\"Learning Go\",\"author\":\"Jon Bodner\"}"
+
+# 3) Get all books
+curl.exe -X GET http://localhost:8080/books
+
+# 4) Get book by ID
+curl.exe -X GET http://localhost:8080/books/1
+
+# 5) Update book by ID
+curl.exe -X PUT http://localhost:8080/books/1 ^
+  -H "Content-Type: application/json" ^
+  -d "{\"title\":\"Go in Action\",\"author\":\"William Kennedy\"}"
+
+# 6) Delete book by ID
+curl.exe -X DELETE http://localhost:8080/books/2
+
+# 7) Cek hasil akhir
+curl.exe -X GET http://localhost:8080/books
+```
 
 ---
 
