@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseFlow — Modern Product Landing Page</title>
+    <meta
+      name="description"
+      content="A modern static landing page for a fictional startup product."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="PulseFlow home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" role="presentation" focusable="false">
+              <path
+                d="M8 11.5C8 9.01472 10.0147 7 12.5 7H19C21.7614 7 24 9.23858 24 12C24 14.7614 21.7614 17 19 17H13.5"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M8 7V25"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M13.5 17L21 25"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </span>
+          <span class="brand-text">PulseFlow</span>
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-panel" id="primary-navigation">
+          <ul class="nav-links">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#cta">Get Started</a></li>
+          </ul>
+          <a class="btn btn-secondary" href="#cta">Request Demo</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">Modern workflow for growing teams</span>
+            <h1>Ship better products with less friction.</h1>
+            <p class="lead">
+              PulseFlow helps product teams plan, launch, and iterate faster
+              with a clean workspace for collaboration, metrics, and delivery.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#cta">Start free trial</a>
+              <a class="btn btn-ghost" href="#features">See features</a>
+            </div>
+
+            <ul class="hero-stats" aria-label="Product highlights">
+              <li><strong>99.9%</strong><span>uptime focus</span></li>
+              <li><strong>2 min</strong><span>to get started</span></li>
+              <li><strong>10x</strong><span>faster handoff</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="dashboard-card">
+              <div class="dashboard-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="dashboard-content">
+                <div class="mini-panel large">
+                  <p>Weekly product flow</p>
+                  <h2>+32% more completed launches</h2>
+                  <div class="chart"></div>
+                </div>
+
+                <div class="mini-grid">
+                  <div class="mini-panel">
+                    <span>Users</span>
+                    <strong>12.4K</strong>
+                  </div>
+                  <div class="mini-panel">
+                    <span>Active teams</span>
+                    <strong>84</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="features">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Features</span>
+            <h2>Everything you need to move from idea to launch.</h2>
+            <p>
+              Built for clarity, speed, and a calm team workflow.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="card reveal">
+              <h3>Clear planning</h3>
+              <p>
+                Organize work into simple stages so everyone knows what comes
+                next.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Live progress</h3>
+              <p>
+                Track delivery status with a focused dashboard that stays easy
+                to scan.
+              </p>
+            </article>
+            <article class="card reveal">
+              <h3>Team alignment</h3>
+              <p>
+                Keep product, design, and engineering in sync without noisy
+                workflows.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-split" id="product">
+        <div class="container split-grid">
+          <div class="split-copy reveal">
+            <span class="eyebrow">About the product</span>
+            <h2>Designed like a modern SaaS, but simple enough to explain in one slide.</h2>
+            <p>
+              PulseFlow is a fictional startup product that shows how a polished
+              landing page can feel premium without being crowded or flashy.
+            </p>
+
+            <div class="checklist">
+              <div>Minimal interface</div>
+              <div>Soft motion</div>
+              <div>Responsive layout</div>
+              <div>Fast to understand</div>
+            </div>
+          </div>
+
+          <div class="split-panel reveal">
+            <div class="quote-card">
+              <p>
+                “We wanted a product page that feels calm, modern, and reliable.
+                Everything here is optimized for readability.”
+              </p>
+              <span>Product Team, PulseFlow</span>
+            </div>
+            <div class="info-card">
+              <h3>Built for the way startups ship</h3>
+              <p>
+                Clean UI, clear messaging, and a strong visual hierarchy make it
+                easy to demo, deploy, and iterate.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="cta">
+        <div class="container cta-card reveal">
+          <div>
+            <span class="eyebrow">Ready to launch?</span>
+            <h2>Turn your idea into a polished web experience.</h2>
+            <p>
+              Use this starter layout as a base for deployment demos, workshop
+              explanations, or your own product landing page.
+            </p>
+          </div>
+          <a class="btn btn-primary" href="#features">Explore features</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 PulseFlow. Built for workshop demo purposes.</p>
+        <a class="back-to-top" href="#top" aria-label="Back to top">
+          <span>Top</span>
+          <span aria-hidden="true">↑</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

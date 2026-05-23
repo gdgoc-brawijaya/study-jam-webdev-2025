@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//d/Kuliah/GDGoC/study-jam-web/**)",
+      "Read(//d/Kuliah/GDGoC/**)"
+    ]
+  }
+}
